@@ -118,7 +118,7 @@ int second_main(char* code, int rounds) {
     for (int i = 0; i < rounds; ++i) {
         print_round_header(i);
         while (1) {
-            printf(">");
+            write(1, ">", 1);
             char* users_input = my_scanf();
             if (is_number_valid(users_input)) {
                 printf("Wrong input!\n");
